@@ -40,6 +40,11 @@ To create a production version of your app:
 npm run build
 ```
 
+<img width="1170" height="1143" alt="screenshot-of-appbar-1" src="https://github.com/user-attachments/assets/30a2ba9d-8361-47cd-926e-c462cdf48e17" />
+
+<img width="1364" height="1143" alt="screenshot-of-appbar-2" src="https://github.com/user-attachments/assets/852a415a-5747-400f-9175-1a9c431dc122" />
+
+
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
