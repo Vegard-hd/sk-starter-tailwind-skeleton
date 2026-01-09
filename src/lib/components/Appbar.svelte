@@ -1,16 +1,9 @@
 <script lang="ts">
-	import {
-		ArrowLeftRightIcon,
-		BikeIcon,
-		BookIcon,
-		HouseIcon,
-		TreePalmIcon,
-		SettingsIcon
-	} from '@lucide/svelte';
+	import { ArrowLeftRightIcon, BikeIcon, BookIcon, HouseIcon, SettingsIcon } from '@lucide/svelte';
 	import { Navigation } from '@skeletonlabs/skeleton-svelte';
 
 	import type { Snippet } from 'svelte';
-	
+
 	let { children }: { children: Snippet } = $props();
 
 	import { fade } from 'svelte/transition';
@@ -21,7 +14,6 @@
 		{ label: 'Home', href: '/', icon: HouseIcon },
 		{ label: 'Entertainment', href: '/entertainment', icon: BookIcon },
 		{ label: 'Recreation', href: '/recreation', icon: BikeIcon },
-		{ label: 'Relaxation', href: '/relaxation', icon: TreePalmIcon },
 		{ label: 'Settings', href: '/settings', icon: SettingsIcon }
 	];
 

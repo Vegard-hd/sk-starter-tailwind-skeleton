@@ -7,7 +7,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Appbar from '$lib/components/Appbar.svelte';
 	import { getSettingsEnabled, setSettingsEnabled } from '$lib/state.svelte';
-
+	import LightModeSwitch from '$lib/components/LightModeSwitch.svelte';
 	let { children } = $props();
 	$effect(() => {
 		const store = localStorage.getItem('settingsEnabled');
@@ -30,6 +30,9 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<div class="hidden" aria-hidden="true">
+	<LightModeSwitch />
+</div>
 <Appbar>
 	{@render children()}
 </Appbar>

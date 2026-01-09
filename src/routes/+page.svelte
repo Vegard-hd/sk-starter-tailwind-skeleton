@@ -6,6 +6,16 @@
 	<div class="space-y-2">
 		<h1 class="h1">SvelteKit Starter Template</h1>
 		<p>A clean and simple starting point for your next project.</p>
+		<p class="text-md opacity-95">
+			Includes a settings toggle that enables/clears user preferences in localStorage and a dark
+			mode toggle persisted in localStorage, plus a responsive 3-stage app bar (large / icons-only
+			on tablet+desktop on the left, bottom bar on mobile) that smoothly transitions between layouts
+			using Svelte transitions. Basic routing is already set up—edit <code
+				>/entertainment/+page.svelte</code
+			>
+			or create a new folder with a
+			<code>+page.svelte</code> file to add routes.
+		</p>
 	</div>
 
 	<div class="variant-ghost-surface mt-10 w-full max-w-md card p-4 md:p-8">
