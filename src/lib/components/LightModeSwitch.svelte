@@ -20,8 +20,10 @@
 
 <svelte:head>
 	<script>
-		const mode = localStorage.getItem('mode') || 'light';
-		document.documentElement.setAttribute('data-mode', mode);
+		(function () {
+			const mode = localStorage.getItem('mode') || 'light';
+			document.documentElement.setAttribute('data-mode', mode);
+		})();
 	</script>
 </svelte:head>
 
