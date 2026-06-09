@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { ArrowLeftRightIcon, BikeIcon, BookIcon, HouseIcon, SettingsIcon } from '@lucide/svelte';
 	import { Navigation } from '@skeletonlabs/skeleton-svelte';
-
 	import type { Snippet } from 'svelte';
+	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { page } from '$app/state';
 
 	let { children }: { children: Snippet } = $props();
 
-	import { fade } from 'svelte/transition';
-
-	import { onMount } from 'svelte';
 
 	const links = [
 		{ label: 'Home', href: '/', icon: HouseIcon },
@@ -36,9 +35,10 @@
 {#snippet navItems()}
 	{#each links as link (link.label)}
 		{@const Icon = link.icon}
-		<Navigation.TriggerAnchor href={link.href}>
-			<Icon class="size-5" />
-			<Navigation.TriggerText>{link.label}</Navigation.TriggerText>
+		{@const isActive = page.url.pathname === link.href}
+		<Navigation.TriggerAnchor class={isActive ? "bg-tertiary-200-800/30" : ""} href={link.href}>
+			<Icon class={isActive ? "size-5" : "size-5"}  />
+			<Navigation.TriggerText class={isActive ? "underline" : ""}>  {link.label}</Navigation.TriggerText>
 		</Navigation.TriggerAnchor>
 	{/each}
 {/snippet}
@@ -88,7 +88,7 @@
 		{#if isMobile}
 			<div in:fade class="bg-surface-50-900 border-t border-surface-200-800">
 				<Navigation layout="bar" class="w-full">
-					<Navigation.Menu class="grid grid-cols-4 gap-1 p-2">
+					<Navigation.Menu class="grid grid-cols-4 gap-1 -m-0.75">
 						{@render navItems()}
 					</Navigation.Menu>
 				</Navigation>
