@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { ArrowLeftRightIcon, BikeIcon, BookIcon, HouseIcon, SettingsIcon } from '@lucide/svelte';
+	import {
+		ArrowLeftRightIcon,
+		BookIcon,
+		HouseIcon,
+		SettingsIcon,
+		Origami
+	} from '@lucide/svelte';
 	import { Navigation } from '@skeletonlabs/skeleton-svelte';
 	import type { Snippet } from 'svelte';
 	import { fade } from 'svelte/transition';
@@ -11,7 +17,7 @@
 	const links = [
 		{ label: 'Home', href: '/', icon: HouseIcon },
 		{ label: 'Entertainment', href: '/entertainment', icon: BookIcon },
-		{ label: 'Recreation', href: '/recreation', icon: BikeIcon },
+		{ label: 'Pokémon', href: '/pokemon', icon: Origami },
 		{ label: 'Settings', href: '/settings', icon: SettingsIcon }
 	];
 
