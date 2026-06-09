@@ -8,7 +8,6 @@
 
 	let { children }: { children: Snippet } = $props();
 
-
 	const links = [
 		{ label: 'Home', href: '/', icon: HouseIcon },
 		{ label: 'Entertainment', href: '/entertainment', icon: BookIcon },
@@ -36,9 +35,11 @@
 	{#each links as link (link.label)}
 		{@const Icon = link.icon}
 		{@const isActive = page.url.pathname === link.href}
-		<Navigation.TriggerAnchor class={isActive ? "bg-tertiary-200-800/30" : ""} href={link.href}>
-			<Icon class={isActive ? "size-5" : "size-5"}  />
-			<Navigation.TriggerText class={isActive ? "underline" : ""}>  {link.label}</Navigation.TriggerText>
+		<Navigation.TriggerAnchor class={isActive ? 'bg-tertiary-200-800/30' : ''} href={link.href}>
+			<Icon class={isActive ? 'size-5' : 'size-5'} />
+			<Navigation.TriggerText class={isActive ? 'underline' : ''}>
+				{link.label}</Navigation.TriggerText
+			>
 		</Navigation.TriggerAnchor>
 	{/each}
 {/snippet}
@@ -88,7 +89,7 @@
 		{#if isMobile}
 			<div in:fade class="bg-surface-50-900 border-t border-surface-200-800">
 				<Navigation layout="bar" class="w-full">
-					<Navigation.Menu class="grid grid-cols-4 gap-1 -m-0.75">
+					<Navigation.Menu class="-m-0.75 grid grid-cols-4 gap-1">
 						{@render navItems()}
 					</Navigation.Menu>
 				</Navigation>

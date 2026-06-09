@@ -2,6 +2,10 @@
 	import { resolve } from '$app/paths';
 </script>
 
+<svelte:head>
+	<title>Home | Sveltekit template</title>
+</svelte:head>
+
 <div class="flex h-full w-full flex-col items-center justify-center text-center">
 	<div class="space-y-2">
 		<h1 class="h1">SvelteKit Starter Template</h1>
